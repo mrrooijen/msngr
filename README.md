@@ -5,6 +5,9 @@ A light-weight Ruby library for multi-threaded Ruby applications that allows thr
 [![Build Status](https://travis-ci.org/meskyanichi/msngr.png)](https://travis-ci.org/meskyanichi/msngr)
 [![Code Climate](https://codeclimate.com/github/meskyanichi/msngr.png)](https://codeclimate.com/github/meskyanichi/msngr)
 
+## API Documentation
+
+The api documentation can be found at [RubyDoc.info](http://rubydoc.info/github/meskyanichi/msngr/frames/file/README.md).
 
 ## Installation
 
