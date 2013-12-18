@@ -3,6 +3,7 @@
 A light-weight Ruby library for multi-threaded Ruby applications that allows threads to share a single service connection for more efficient messaging.
 
 [![Build Status](https://travis-ci.org/meskyanichi/msngr.png)](https://travis-ci.org/meskyanichi/msngr)
+[![Code Climate](https://codeclimate.com/github/meskyanichi/msngr.png)](https://codeclimate.com/github/meskyanichi/msngr)
 
 
 ## Installation
