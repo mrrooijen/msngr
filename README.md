@@ -200,7 +200,7 @@ This'll build and install the gem of the current state of your local copy of Msn
 
 ## License
 
-This open source project is released under the MIT license. See `LICENSE.txt`.
+This open source project is released under the MIT license. See [LICENSE.txt](https://github.com/meskyanichi/msngr/blob/master/LICENSE.txt).
 
 
 [Tubesock]: https://github.com/ngauthier/tubesock
