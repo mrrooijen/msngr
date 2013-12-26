@@ -17,6 +17,7 @@ class Msngr::Messenger
   # Initializes a new Messenger.
   #
   # @param [Msngr::Clients::*] client the to receive messages from.
+  #
   # @return [Receiver]
   #
   def initialize(client)
@@ -29,6 +30,7 @@ class Msngr::Messenger
   # it'll receive messages matching the provided pattern.
   #
   # @param [Regexp] pattern
+  #
   # @return [Receiver]
   #
   def subscribe(pattern)

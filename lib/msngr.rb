@@ -9,6 +9,7 @@ module Msngr
   # Shorthand for writing Msngr::Messenger.new(*args).
   #
   # @param [Array] *args
+  #
   # @return [Msngr::Messenger]
   #
   def new(*args)

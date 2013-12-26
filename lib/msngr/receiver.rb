@@ -23,6 +23,7 @@ class Msngr::Receiver
   # Initializes a new Receiver.
   #
   # @param [Regexp] pattern the pattern to listen for.
+  #
   # @return [Receiver]
   #
   def initialize(pattern = /.+/)
