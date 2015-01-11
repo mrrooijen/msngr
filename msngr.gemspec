@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name          = "msngr"
   spec.version       = Msngr::VERSION
   spec.authors       = ["Michael van Rooijen"]
-  spec.email         = ["meskyanichi@gmail.com"]
+  spec.email         = ["michael@vanrooijen.io"]
   spec.description   = "A light-weight Ruby library for multi-threaded Ruby applications that allows threads to share a single service connection for more efficient messaging."
   spec.summary       = spec.description
   spec.homepage      = "https://github.com/meskyanichi/msngr/"
