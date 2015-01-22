@@ -6,12 +6,12 @@ describe Msngr::Receiver do
   let(:receiver) { Msngr::Receiver.new }
 
   it "should initialize with a default wildcard pattern" do
-    receiver.pattern.should == /.+/
+    expect(receiver.pattern).to eq(/.+/)
   end
 
   it "should initialize with a custom pattern" do
     pattern = /rooms\.1/
-    Msngr::Receiver.new(pattern).pattern.should == pattern
+    expect(Msngr::Receiver.new(pattern).pattern).to eq(pattern)
   end
 
   it "should define an message callback" do
@@ -19,8 +19,8 @@ describe Msngr::Receiver do
     receiver.on_message(&callback)
 
     callbacks = receiver.on_message_callbacks
-    callbacks.size.should == 1
-    callbacks.first.call("message").should == "invoked: message"
+    expect(callbacks.size).to eq(1)
+    expect(callbacks.first.call("message")).to eq("invoked: message")
   end
 
   it "should define an unsubscribe callback" do
@@ -28,10 +28,10 @@ describe Msngr::Receiver do
     receiver.on_unsubscribe(&callback)
 
     callbacks = receiver.on_unsubscribe_callbacks
-    callbacks.size.should == 1
+    expect(callbacks.size).to eq(1)
 
     object = Object.new
-    callbacks.first.call(object).should == "unsubscribed from: #{object}"
+    expect(callbacks.first.call(object)).to eq("unsubscribed from: #{object}")
   end
 end
 

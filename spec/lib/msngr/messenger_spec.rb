@@ -4,53 +4,53 @@ require "msngr/messenger"
 
 describe Msngr::Messenger do
 
-  let(:client)    { mock }
+  let(:client)    { double }
   let(:messenger) { Msngr::Messenger.new(client) }
 
   it "should initialize with an empty array of receivers" do
-    messenger.receivers.should be_empty
+    expect(messenger.receivers).to be_empty
   end
 
   it "should create a new Receiver and add it to @receivers" do
     receiver = messenger.subscribe(/.+/)
-    messenger.should have(1).receivers
-    messenger.receivers.first.should == receiver
+    expect(messenger.receivers.count).to eq(1)
+    expect(messenger.receivers.first).to eq(receiver)
   end
 
   it "should unsubscribe a receiver" do
     receiver = messenger.subscribe(/.+/)
-    messenger.expects(:dispatch).
+    expect(messenger).to receive(:dispatch).
       with(receiver.on_unsubscribe_callbacks, messenger)
     messenger.unsubscribe(receiver)
-    messenger.should have(0).receivers
+    expect(messenger.receivers.count).to eq(0)
   end
 
   it "should start listening on a separate thread" do
-    Thread.expects(:new).yields
-    messenger.expects(:loop).yields
-    messenger.expects(:listen).once
+    expect(Thread).to receive(:new).and_yield
+    expect(messenger).to receive(:loop).and_yield
+    expect(messenger).to receive(:listen).once
     messenger.listen!
   end
 
   it "should display a backtrace on error and restart" do
-    Thread.expects(:new).yields
-    messenger.expects(:loop).yields
-    messenger.expects(:listen).raises.then.returns
-    messenger.expects(:puts).times(4)
-    messenger.expects(:sleep)
+    expect(Thread).to receive(:new).and_yield
+    expect(messenger).to receive(:loop).and_yield
+    expect(messenger).to receive(:listen).and_raise
+    expect(messenger).to receive(:puts).exactly(4).times
+    expect(messenger).to receive(:sleep)
     messenger.listen!
   end
 
   it "should listen to the client but not dispatch" do
     messenger.subscribe(/room\.2/)
-    client.expects(:on_message).yields("room.1", "Hi John")
-    messenger.expects(:dispatch).never
+    expect(client).to receive(:on_message).and_yield("room.1", "Hi John")
+    expect(messenger).to receive(:dispatch).never
     messenger.send(:listen)
   end
 
   it "should listen to the client and dispatch a message" do
-    messenger.subscribe(/room\.1/).on_message { |m| m.should == "Hi John" }
-    client.expects(:on_message).yields("room.1", "Hi John")
+    messenger.subscribe(/room\.1/).on_message { |m| expect(m).to eq("Hi John") }
+    expect(client).to receive(:on_message).and_yield("room.1", "Hi John")
     messenger.send(:listen)
   end
 
@@ -58,7 +58,7 @@ describe Msngr::Messenger do
     3.times do
       messenger.subscribe(/room\.1/).tap do |receiver|
         cb = proc {}
-        cb.expects(:call).with("Hi John")
+        expect(cb).to receive(:call).with("Hi John")
         receiver.on_message(&cb)
       end
     end
@@ -66,12 +66,12 @@ describe Msngr::Messenger do
     2.times do
       messenger.subscribe(/room\.2/).tap do |receiver|
         cb = proc {}
-        cb.expects(:call).never
+        expect(cb).to receive(:call).never
         receiver.on_message(&cb)
       end
     end
 
-    client.expects(:on_message).yields("room.1", "Hi John")
+    expect(client).to receive(:on_message).and_yield("room.1", "Hi John")
     messenger.send(:listen)
   end
 end
