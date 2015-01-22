@@ -7,4 +7,3 @@ describe Msngr do
     expect(Msngr.new(double).class).to eq(Msngr::Messenger)
   end
 end
-

@@ -75,4 +75,3 @@ describe Msngr::Messenger do
     messenger.send(:listen)
   end
 end
-

@@ -59,4 +59,3 @@ class Msngr::Receiver
     @mutex.synchronize { @on_unsubscribe_callbacks << block }
   end
 end
-

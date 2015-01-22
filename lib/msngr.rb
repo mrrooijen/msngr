@@ -16,4 +16,3 @@ module Msngr
     Messenger.new(*args)
   end
 end
-

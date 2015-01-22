@@ -44,4 +44,3 @@ class Msngr::Clients::Redis
     end
   end
 end
-

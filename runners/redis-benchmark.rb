@@ -70,4 +70,3 @@ Benchmark.bm do |x|
     [pid1, pid2].each { |pid| Process.wait(pid) }
   end
 end
-

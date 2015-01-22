@@ -102,4 +102,3 @@ class Msngr::Messenger
     callbacks.each { |callback| callback.call(*args) }
   end
 end
-

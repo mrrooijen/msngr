@@ -34,4 +34,3 @@ describe Msngr::Receiver do
     expect(callbacks.first.call(object)).to eq("unsubscribed from: #{object}")
   end
 end
-

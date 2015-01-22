@@ -24,4 +24,3 @@ receivers = messenger.receivers.dup
 Parallel.each(receivers, in_threads: 8) { |receiver| messenger.unsubscribe(receiver) }
 
 puts "unsubscribe    | done: #{messenger.receivers.size}"
-

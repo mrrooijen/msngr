@@ -39,4 +39,3 @@ describe Msngr::Clients::Redis do
     end
   end
 end
-
