@@ -4,7 +4,7 @@ require "msngr/messenger"
 
 describe Msngr::Messenger do
 
-  let(:client)    { double }
+  let(:client) { double }
   let(:messenger) { Msngr::Messenger.new(client) }
 
   it "should initialize with an empty array of receivers" do
@@ -19,8 +19,8 @@ describe Msngr::Messenger do
 
   it "should unsubscribe a receiver" do
     receiver = messenger.subscribe(/.+/)
-    expect(messenger).to receive(:dispatch).
-      with(receiver.on_unsubscribe_callbacks, messenger)
+    expect(messenger).to receive(:dispatch)
+      .with(receiver.on_unsubscribe_callbacks, messenger)
     messenger.unsubscribe(receiver)
     expect(messenger.receivers.count).to eq(0)
   end

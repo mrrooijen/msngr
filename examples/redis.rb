@@ -3,8 +3,8 @@ $:.unshift(File.expand_path("../lib", __FILE__))
 require "msngr"
 require "msngr/clients/redis"
 
-redis     = Redis.new
-client    = Msngr::Clients::Redis.new
+redis = Redis.new
+client = Msngr::Clients::Redis.new
 messenger = Msngr.new(client).tap(&:listen!)
 
 r1, r2, r3 = (1..3).map do |n|

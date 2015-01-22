@@ -4,7 +4,7 @@ require "ostruct"
 require "parallel"
 require "msngr"
 
-client    = OpenStruct.new
+client = OpenStruct.new
 messenger = Msngr.new(client)
 
 Parallel.each(1..10_000, in_threads: 8) { messenger.subscribe(/.+/) }

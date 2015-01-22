@@ -27,10 +27,10 @@ class Msngr::Receiver
   # @return [Receiver]
   #
   def initialize(pattern = /.+/)
-    @pattern                  = pattern
-    @on_message_callbacks     = []
+    @pattern = pattern
+    @on_message_callbacks = []
     @on_unsubscribe_callbacks = []
-    @mutex                    = Mutex.new
+    @mutex = Mutex.new
   end
 
   # Define a callback that invokes on each received message.

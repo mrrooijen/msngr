@@ -21,9 +21,9 @@ class Msngr::Messenger
   # @return [Receiver]
   #
   def initialize(client)
-    @client    = client
+    @client = client
     @receivers = []
-    @mutex     = Mutex.new
+    @mutex = Mutex.new
   end
 
   # Creates and returns a new Receiver and adds it to @receivers so
