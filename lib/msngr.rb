@@ -1,9 +1,9 @@
-require "msngr/version"
-require "msngr/receiver"
-require "msngr/messenger"
-
 module Msngr
-  module Clients; end
+  require "msngr/version"
+  require "msngr/clients"
+  require "msngr/receiver"
+  require "msngr/messenger"
+
   extend self
 
   # Shorthand for writing Msngr::Messenger.new(*args).
