@@ -1,0 +1,2 @@
+module Msngr::Clients
+end
