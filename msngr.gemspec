@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email = ["michael@vanrooijen.io"]
   spec.description = "A light-weight Ruby library for multi-threaded Ruby applications that allows threads to share a single service connection for more efficient messaging."
   spec.summary = spec.description
-  spec.homepage = "https://github.com/meskyanichi/msngr/"
+  spec.homepage = "https://github.com/mrrooijen/msngr/"
   spec.license = "MIT"
   spec.files = Dir["./lib/**/*.rb"] + Dir["./spec/**/*.rb"]
   spec.test_files = spec.files.grep(%r{^(spec)/})

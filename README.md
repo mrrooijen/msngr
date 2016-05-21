@@ -1,8 +1,8 @@
 # Msngr
 
 [![Gem Version](https://badge.fury.io/rb/msngr.svg)](http://badge.fury.io/rb/msngr)
-[![Build Status](https://travis-ci.org/meskyanichi/msngr.png)](https://travis-ci.org/meskyanichi/msngr)
-[![Code Climate](https://codeclimate.com/github/meskyanichi/msngr.png)](https://codeclimate.com/github/meskyanichi/msngr)
+[![Build Status](https://travis-ci.org/mrrooijen/msngr.png)](https://travis-ci.org/mrrooijen/msngr)
+[![Code Climate](https://codeclimate.com/github/mrrooijen/msngr.png)](https://codeclimate.com/github/mrrooijen/msngr)
 
 A light-weight Ruby library for multi-threaded Ruby applications that allows threads to share a single service connection for more efficient messaging.
 
@@ -159,7 +159,7 @@ This is the only required method to implement a compatible client.
 Be sure you have a Redis server running on your local machine, and do the following:
 
 ```
-git clone https://github.com/meskyanichi/msngr.git
+git clone https://github.com/mrrooijen/msngr.git
 cd msngr
 bundle
 pry ./examples/redis.rb
@@ -216,11 +216,11 @@ Submit a pull request.
 
 Released under the [MIT License] by [Michael van Rooijen].
 
-[Michael van Rooijen]: https://twitter.com/meskyanichi
+[Michael van Rooijen]: https://twitter.com/mrrooijen
 [HireFire]: http://hirefire.io
-[Passing Specs]: https://travis-ci.org/meskyanichi/msngr
-[Code Climate Score]: https://codeclimate.com/github/meskyanichi/msngr
-[RubyDoc]: http://rubydoc.info/github/meskyanichi/msngr/master/frames
-[MIT License]: https://github.com/meskyanichi/msngr/blob/master/LICENSE
+[Passing Specs]: https://travis-ci.org/mrrooijen/msngr
+[Code Climate Score]: https://codeclimate.com/github/mrrooijen/msngr
+[RubyDoc]: http://rubydoc.info/github/mrrooijen/msngr/master/frames
+[MIT License]: https://github.com/mrrooijen/msngr/blob/master/LICENSE
 [RubyGems.org]: https://rubygems.org/gems/msngr
 [Tubesock]: https://github.com/ngauthier/tubesock
