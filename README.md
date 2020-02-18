@@ -1,7 +1,8 @@
 # Msngr
 
 [![Gem Version](https://badge.fury.io/rb/msngr.svg)](http://badge.fury.io/rb/msngr)
-[![Build Status](https://travis-ci.org/mrrooijen/msngr.png)](https://travis-ci.org/mrrooijen/msngr)
+[![Test
+Status](https://github.com/mrrooijen/msngr/workflows/Test/badge.svg)](https://github.com/mrrooijen/msngr/actions)
 [![Code Climate](https://codeclimate.com/github/mrrooijen/msngr.png)](https://codeclimate.com/github/mrrooijen/msngr)
 
 A light-weight Ruby library for multi-threaded Ruby applications that allows threads to share a single service connection for more efficient messaging.
