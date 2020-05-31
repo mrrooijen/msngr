@@ -16,12 +16,12 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler"
-  spec.add_development_dependency "rake", "~> 10.4.2"
-  spec.add_development_dependency "rspec", "~> 3.1.0"
-  spec.add_development_dependency "pry", "~> 0.10.1"
-  spec.add_development_dependency "simplecov", "~> 0.9.1"
-  spec.add_development_dependency "yard", "~> 0.9.20.0"
-  spec.add_development_dependency "redis", "~> 3.2.0"
-  spec.add_development_dependency "hiredis", "~> 0.5.2"
-  spec.add_development_dependency "parallel", "~> 1.3.3"
+  spec.add_development_dependency "rake", "~> 13"
+  spec.add_development_dependency "rspec", "~> 3.1"
+  spec.add_development_dependency "pry", "~> 0.10"
+  spec.add_development_dependency "simplecov", "~> 0.9"
+  spec.add_development_dependency "yard", "~> 0.9"
+  spec.add_development_dependency "redis", "~> 4.1"
+  spec.add_development_dependency "hiredis", "~> 0.5"
+  spec.add_development_dependency "parallel", "~> 1.3"
 end
